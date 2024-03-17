@@ -5,3 +5,4 @@ def login(request):
 
 def logout(request):
     return HttpResponse("Log out")
+
