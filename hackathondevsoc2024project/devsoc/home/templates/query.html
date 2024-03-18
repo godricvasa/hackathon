@@ -20,12 +20,12 @@
         <form action="{% url 'home' %}" method="post">
             {% csrf_token %}
             <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" required>
+                <label for="title">Question</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Enter question" required>
             </div>
             <div class="form-group">
-                <label for="post">Question</label>
-                <textarea class="form-control" id="post" name="question" rows="7" cols="30" placeholder="Enter your question" required></textarea>
+                <label for="post">Description</label>
+                <textarea class="form-control" id="post" name="question" rows="7" cols="30" placeholder="A short description" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary mb-2">Publish</button>
         </form>

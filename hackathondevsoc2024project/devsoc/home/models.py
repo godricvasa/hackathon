@@ -11,7 +11,6 @@ class Answer(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-
 class Comment(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, null=True, blank=True)
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE, null=True, blank=True)

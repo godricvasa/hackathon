@@ -34,13 +34,19 @@ body {
             </ul>
           </div>
         </div>
-        <a href="{% url 'query' %}"><button type="button" class="btn btn-primary custom-btn">Query</button></a></nav>
+        <a href="{% url 'query' %}"><button type="button" class="btn btn-primary custom-btn">Ask a question</button></a></nav>
       
       <main class="container">
         <div class="bg-light p-5 rounded">
-          <h1>Question</h1>
-          <p class="lead">Answer</p>
-          <a class="btn btn-lg btn-primary" href="/docs/5.0/components/navbar/" role="button">Go discuss &raquo;</a>
+          <h1>How to create a django project</h1>
+          <p class="lead">Type "django-admin startproject project_name" on terminal to create a project</p>
+          <a class="btn btn-lg btn-primary" href="{% url 'query' %}" role="button">discuss &raquo;</a>
+        </div>
+        <br>
+        <div class="bg-light p-5 rounded">
+          <h1>How to get input from django</h1>
+          <p class="lead">you typically use HTML forms along with Django's form handling capabilities</p>
+          <a class="btn btn-lg btn-primary" href="{% url 'query' %}" role="button">discuss &raquo;</a>
         </div>
       </main>
       

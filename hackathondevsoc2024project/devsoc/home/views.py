@@ -7,12 +7,9 @@ def home(request):
 
 
 def query(request):
-    print("def")
     if request.method == 'POST':
-        print("if")
         form = QuestionForm(request.POST)
         if form.is_valid():
-            print("valid")
             form.save()
             return redirect('question_list')  # Redirect to a page displaying the list of questions
     else:
