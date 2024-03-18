@@ -17,7 +17,7 @@ background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
 background-size: 10px 10px;
             /* Light gray background */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: black; /* Default text color */
+            color: #333; /* Default text color */
         }
 
         .navbar-brand {
@@ -65,7 +65,7 @@ background-size: 10px 10px;
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{ question.question_text }}</h5>
-                    <a href="#" class="btn btn-primary">Discuss</a>
+                    <a href="{% url "add_answer" question_id=question.id %}" class="btn btn-primary">Discuss</a>
                 </div>
             </div>
             {% endfor %}
@@ -74,7 +74,7 @@ background-size: 10px 10px;
     </main>
 
     <!-- Your Form -->
-    <form method="post" action="{% url 'add_question' %}" class="container answer-form">
+    <form method="post" action="{% url 'add_question'  %}" class="container answer-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Raise a qn</button>
