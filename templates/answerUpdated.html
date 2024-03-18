@@ -14,6 +14,47 @@
             color: #007bff; /* Blue color for brand */
             
         }
+        .answer {
+    background-color: #f8f9fa; /* Light gray background for answers */
+    padding: 15px; /* Padding for spacing */
+    margin-bottom: 20px; /* Margin bottom for spacing between answers */
+    border-radius: 10px; /* Rounded corners for visual appeal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow effect */
+}
+
+.answer p {
+    font-size: 16px; /* Font size for the content */
+    line-height: 1.6; /* Line height for better readability */
+    color: #333; /* Text color */
+}
+
+.answer p:first-child {
+    margin-top: 0; /* Remove top margin for the first paragraph */
+}
+
+.answer p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+}
+
+        .existing-answers {
+    background-color: #f1f1f1; /* Light gray background for the entire section */
+    padding: 20px; /* Padding for spacing */
+    border-radius: 10px; /* Rounded corners for visual appeal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow effect */
+}
+
+.existing-answers h3 {
+    color: #333; /* Dark gray color for the header */
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    text-transform: uppercase; /* Convert text to uppercase */
+    padding: 10px; /* Padding for spacing */
+     /* Blue background color */
+    /* White text color */
+    border-radius: 5px; /* Rounded corners for visual appeal */
+}
+
+
 
         .bg-light {
             background-color: gray; /* White background for main content */
@@ -64,11 +105,14 @@ background-size: 10px 10px;
         
         <!-- Render existing answers -->
         <div class="mt-3">
-            <h3>Existing Answers:</h3>
-            {% for answer in question.answers %}
-                <div class="answer">{{ answer }}</div>
-            {% endfor %}
+            <div class="existing-answers">
+                <h3>Existing Answers:</h3>
+                {% for answer in question.answers %}
+                    <div class="answer">{{ answer }}</div>
+                {% endfor %}
+            </div>
         </div>
+        
     </div>
 
     <!-- Bootstrap JS Bundle -->
